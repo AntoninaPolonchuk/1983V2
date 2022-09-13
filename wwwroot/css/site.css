@@ -1,0 +1,508 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.mobile {
+    position: absolute;
+
+
+
+}
+
+.broiler {
+    position: absolute;
+    top: -600px;
+    right: -800px;
+
+    transition: 1.0s;
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+.background {
+    z-index: 200;
+}
+
+.front {
+    z-index: 670;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    .buttons {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    .buttons2 {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .buttons {
+        grid-template-columns: 0% 50% 50% 0%;
+    }
+
+    .buttons2 {
+        grid-template-columns: 0% 50% 50% 0%;
+    }
+}
+﻿
+
+.move {
+    position: relative;
+    z-index: 100;
+}
+
+.money {
+    position: fixed;
+    top: 15px;
+    right: 0;
+}
+
+.moneycount {
+    position: fixed;
+    top: 15px;
+    right: 5px;
+    font-style: italic;
+    font-size: 46px;
+    font-weight: 700;
+    font-stretch: expanded;
+}
+
+
+.buttons {
+    display: grid;
+    position: fixed;
+    bottom: -150px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.buttons2 {
+    display: grid;
+    position: fixed;
+    bottom: -150px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.buttonpart {
+    height: 50px;
+    width: 100%;
+    background: #56C3E2;
+}
+
+    .buttonpart:hover {
+        transform: scale(103%);
+        transition: 0.1s;
+        background: #4FB0D0;
+    }
+
+
+.text {
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+}
+
+
+.house {
+    position: absolute;
+    width: 60px;
+    height: 185px;
+    pointer-events: none;
+}
+
+    .house:hover {
+        transform: scale(103%);
+        transition: 0.1s;
+    }
+
+
+
+    .house.Yl_1 {top: 200px;left: 340px;}
+    .house.Yl_2 {top: 160px; left: 410px;}
+    .house.Yl_3 {top: 120px; left: 480px;}
+    .house.Yl_4 {top: 80px; left: 550px;}
+    .house.Yl_5 {top: 45px; left: 615px;}
+    .house.Yl_6 {top: 230px; left: 400px;}
+    .house.Yl_7 {top: 195px; left: 475px;}
+    .house.Yl_8 {top: 155px; left: 545px;}
+    .house.Yl_9 {top: 115px; left: 615px;}
+    .house.Yl_10 {top: 80px; left: 685px;}
+    .house.Yl_11 {top: 290px; left: 490px;}
+    .house.Yl_12 {top: 255px; left: 560px;}
+    .house.Yl_13 {top: 215px; left: 630px;}
+    .house.Yl_14 {top: 170px; left: 705px;}
+    .house.Yl_15 {top: 135px; left: 780px;}
+    .house.Yl_16 {top: 290px; left: 625px;}
+    .house.Yl_17 {top: 250px; left: 700px;}
+    .house.Yl_18 {top: 210px; left: 775px;}
+    .house.Yl_19 {top: 175px; left: 850px;}
+
+
+
+
+#Дом_6 {
+    transition: 0.2s;
+    pointer-events: auto;
+}
+
+#Дом_0 {
+    transition: 0.2s;
+    pointer-events: auto;
+}
+
+#Дом_1 {
+    display: none;
+    pointer-events: auto;
+}
+
+#Дом_2 {
+    display: none;
+    pointer-events: auto;
+}
+
+#Дом_3 {
+    display: none;
+    pointer-events: auto;
+}
+
+#Дом_4 {
+    display: none;
+    pointer-events: auto;
+}
+
+#Дом_5 {
+    display: none;
+    pointer-events: auto;
+}
+
+
+.pole {
+    animation: polea 20s ease-in-out infinite;
+}
+
+/*body {
+    overflow: hidden;
+    transition: 1s;
+    animation: day 20s ease-in-out infinite;
+}*/
+
+.leftwindow {
+    animation: leftwindows 20s ease-in-out infinite;
+}
+
+.rigthwindow {
+    animation: rigthwindows 20s ease-in-out infinite;
+}
+
+.light {
+    animation: lights 20s ease-in-out infinite;
+}
+
+.grass {
+    animation: grasses 20s ease-in-out infinite;
+}
+
+.waterside {
+    animation: watersidea 20s ease-in-out infinite;
+}
+
+.waterbase {
+    animation: waterbasea 20s ease-in-out infinite;
+}
+
+.watera {
+    animation: wateraa 20s ease-in-out infinite;
+}
+
+.waterb {
+    animation: waterba 20s ease-in-out infinite;
+}
+
+.base {
+    animation: baseaa 20s ease-in-out infinite;
+}
+
+.base2 {
+    animation: baseba 20s ease-in-out infinite;
+}
+
+.base3 {
+    animation: baseca 20s ease-in-out infinite;
+}
+
+.base4 {
+    animation: baseda 20s ease-in-out infinite;
+}
+
+.base5 {
+    animation: baseea 20s ease-in-out infinite;
+}
+
+.road {
+    animation: roada 20s ease-in-out infinite;
+}
+
+.lake {
+    animation: lakeaa 20s ease-in-out infinite;
+}
+
+.lake2 {
+    animation: lakeba 20s ease-in-out infinite;
+}
+
+.lake3 {
+    animation: lakeca 20s ease-in-out infinite;
+}
+
+.lake4 {
+    animation: lakeda 20s ease-in-out infinite;
+}
+
+@keyframes polea {
+    0% {fill: #9cbd2a;}
+    20% {fill: #c1ea33;}
+    40% {fill: #9cbd2a;}
+    60% {fill: #9cbd2a;}
+    70% {fill: #91b027;}
+    80% {fill: #809a22;}
+    90% {fill: #9cbd2a;}
+    100% {fill: #9cbd2a;}
+}
+
+/*@keyframes day {
+    0% {background: #bfe8f4;}
+    20% {background: #a8bae4;}
+    40% {background: #cff8f6;}
+    60% {background: #586c99;}
+    70% {background: #444c5e;}
+    80% {background: #3c414b;}
+    90% {background: #bdb2c1;}
+    100% {background: #bfe8f4;}
+}*/
+
+@keyframes leftwindows {
+    0% {fill: #a7d4f5}
+    50% {fill: #a7d4f5}
+    60% {fill: #f4ee41}
+    70% {fill: #beb930}
+    80% {fill: #666659}
+    100% {fill: #a7d4f5}
+}
+
+@keyframes rigthwindows {
+    0% {fill: #6b9fc7}
+    50% {fill: #6b9fc7}
+    60% {fill: #e0db3d}
+    70% {fill: #c3be35}
+    80% {fill: #55554c}
+    100% {fill: #6b9fc7}
+}
+
+@keyframes grasses {
+    0% {fill: #769702;}
+    20% {fill: #9bc310;}
+    40% {fill: #769702;}
+    60% {fill: #769702;}
+    70% {fill: #658004;}
+    80% {fill: #506506;}
+    90% {fill: #769702;}
+    100% {fill: #769702;}
+}
+
+@keyframes lights {
+    0% {fill-opacity: 0}
+    40% {fill-opacity: 0}
+    60% {fill-opacity: 0.317647}
+    75% {fill-opacity: 0.5}
+    85% {fill-opacity: 0.317647}
+    100% {fill-opacity: 0}
+}
+
+@keyframes watersidea {
+    0% {fill: #2e8da1;}
+    20% {fill: #3db8d2;}
+    40% {fill: #2e8da1;}
+    60% {fill: #2e8da1;}
+    70% {fill: #216674;}
+    80% {fill: #1d5a67;}
+    90% {fill: #2e8da1;}
+    100% {fill: #2e8da1;}
+}
+
+@keyframes waterbasea {
+    0% {fill: #56c3e2;}
+    20% {fill: #5cdbff;}
+    40% {fill: #56c3e2;}
+    60% {fill: #56c3e2;}
+    70% {fill: #459eb7;}
+    80% {fill: #378197;}
+    90% {fill: #56c3e2;}
+    100% {fill: #56c3e2;}
+}
+
+@keyframes wateraa {
+    0% {fill: #4296b0;}
+    20% {fill: #54c3e5;}
+    40% {fill: #4296b0;}
+    60% {fill: #4296b0;}
+    70% {fill: #2f6e81;}
+    80% {fill: #23505f;}
+    90% {fill: #4296b0;}
+    100% {fill: #4296b0;}
+}
+
+@keyframes waterba {
+    0% {fill: #4fb0d0;}
+    20% {fill: #5ccdf3;}
+    40% {fill: #4fb0d0;}
+    60% {fill: #4fb0d0;}
+    70% {fill: #3e869e;}
+    80% {fill: #2d6476;}
+    90% {fill: #4fb0d0;}
+    100% {fill: #4fb0d0;}
+}
+
+
+@keyframes baseaa {
+    0% {fill: #c5c7c6;}
+    20% {fill: #dfdfdf;}
+    40% {fill: #c5c7c6;}
+    60% {fill: #c5c7c6;}
+    70% {fill: #b0b2b1;}
+    80% {fill: #969997;}
+    90% {fill: #c5c7c6;}
+    100% {fill: #c5c7c6;}
+}
+
+@keyframes baseba {
+    0% {fill: #e1e7e5;}
+    20% {fill: #fbfbfb;}
+    40% {fill: #e1e7e5;}
+    60% {fill: #e1e7e5;}
+    70% {fill: #c0c6c4;}
+    80% {fill: #aeb7b4;}
+    90% {fill: #e1e7e5;}
+    100% {fill: #e1e7e5;}
+}
+
+@keyframes baseca {
+    0% {fill: #f6fffa;}
+    20% {fill: #ffffff;}
+    40% {fill: #f6fffa;}
+    60% {fill: #f6fffa;}
+    70% {fill: #e2e8e4;}
+    80% {fill: #ccd0ce;}
+    90% {fill: #f6fffa;}
+    100% {fill: #f6fffa;}
+}
+
+@keyframes baseda {
+    0% {fill: #c2c6c5;}
+    20% {fill: #d0d8d6;}
+    40% {fill: #c2c6c5;}
+    60% {fill: #c2c6c5;}
+    70% {fill: #aeb4b2;}
+    80% {fill: #949997;}
+    90% {fill: #c2c6c5;}
+    100% {fill: #c2c6c5;}
+}
+
+@keyframes baseea {
+    0% {fill: #a9abaa;}
+    20% {fill: #c7cac8;}
+    40% {fill: #a9abaa;}
+    60% {fill: #a9abaa;}
+    70% {fill: #8e8e8e;}
+    80% {fill: #6a6b6b;}
+    90% {fill: #a9abaa;}
+    100% {fill: #a9abaa;}
+}
+
+@keyframes roada {
+    0% {fill: #3b4151;}
+    20% {fill: #474e5f;}
+    40% {fill: #3b4151;}
+    60% {fill: #3b4151;}
+    70% {fill: #303440;}
+    80% {fill: #282c34;}
+    90% {fill: #3b4151;}
+    100% {fill: #3b4151;}
+}
+
+@keyframes lakeaa {
+    0% {fill: #f9ffff;}
+    20% {fill: #ffffff;}
+    40% {fill: #f9ffff;}
+    60% {fill: #f9ffff;}
+    70% {fill: #e7eeee;}
+    80% {fill: #d3d6d6;}
+    90% {fill: #f9ffff;}
+    100% {fill: #f9ffff;}
+}
+
+@keyframes lakeba {
+    0% {fill: #038dce;}
+    20% {fill: #1fa9ea;}
+    40% {fill: #038dce;}
+    60% {fill: #038dce;}
+    70% {fill: #0276ac;}
+    80% {fill: #016290;}
+    90% {fill: #038dce;}
+    100% {fill: #038dce;
+    }
+}
+
+@keyframes lakeca {
+    0% {fill: #c0c2bf;}
+    20% {fill: #d6d9d5;}
+    40% {fill: #c0c2bf;}
+    60% {fill: #c0c2bf;}
+    70% {fill: #acb2aa;}
+    80% {fill: #9a9f98;}
+    90% {fill: #c0c2bf;}
+    100% {fill: #c0c2bf;}
+}
+
+@keyframes lakeda {
+    0% {fill: #0192d5;}
+    20% {fill: #07a1e8;}
+    40% {fill: #0192d5;}
+    60% {fill: #0192d5;}
+    70% {fill: #0084c1;}
+    80% {fill: #0074a9;}
+    90% {fill: #0192d5;}
+    100% {fill: #0192d5;}
+}
