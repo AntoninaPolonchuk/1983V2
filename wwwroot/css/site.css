@@ -5,50 +5,68 @@
 
 
 .mobile {
-    position: absolute;
+    /*position: absolute;*/
 
 
 
 }
 
+.plathform {
+    /*position: relative;*/
+}
+
+.menubottons {
+    position: relative;
+    top: 600px;
+    left: 30px;
+    border: 3px solid blue;
+    padding: 10px;
+    margin: 10px;
+    height: 300px;
+    background: #9cbd2a;
+}
+
+.menubottonsphone {
+    grid-template-columns: 10% 80% 10%;
+    
+}
+
+
+/*.box {
+    position: fixed;
+    height: 200px;
+    width: 200px;
+    background: #9cbd2a;
+    top: 100px;
+    right: 100px;
+}
+*/
+/*border-block:groove;   запомнить для кнопок*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .broiler {
     position: absolute;
-    top: -600px;
-    right: -800px;
+    /*    top: -600px;
+    right: -800px;*/
 
     transition: 1.0s;
     pointer-events: none;
     z-index: 0;
 }
-
-
-.background {
-    z-index: 200;
-}
-
-.front {
-    z-index: 670;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
