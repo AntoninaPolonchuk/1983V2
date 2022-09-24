@@ -74,7 +74,6 @@
       @for (int i = 1; i < 20;i++)
       {
         int vis = 1;
-        @*int index = i;*@
 
         if (i < 4)
        {
@@ -235,6 +234,34 @@
         <div><button class="buttonpart" id="Отмена2"><p class="text">Отмена</p></button></div>
         <div></div>
     </div>
+
+
+    @section Scripts
+    {
+
+        <script>
+
+            var data = @Html.Raw(@Model.GameDataUserJson);
+
+            // попробовать осмыслить глубину мысли
+
+            // меняются поля при загрузке. 
+            data.Houses[0].Level = 5;
+            MoneyRest = 500;
+
+
+
+            var to_Json = JSON.stringify(data);
+            $(".text").html(to_Json);
+            
+
+
+        </script>
+
+
+
+    }
+
 
   
   

@@ -5,16 +5,16 @@
 // Меню для компа
 
 
-//$(document).ready(function () {
-//    setInterval(function () { BroilerMove() }, 1000);
-//});
+$(document).ready(function () {
+    setInterval(function () { BroilerMove() }, 2000);
+});
 
 
 
 
 $(document).ready(function () {
 
-    housePlase();
+    /*housePlase();*/
 
     // если есть вожможность разделить запуск разных функций, с разных страних, прикрутить только к странице с игрой
     //$('body').css({ 'overflow': 'hidden' });
@@ -24,14 +24,14 @@ $(document).ready(function () {
  
 });
 
-let housestatus = "1234454212334543226";
+//let housestatus = "1234454212334543226";
 
-function housePlase() {
+//function housePlase() {
 
-    for (let i = 1; i < 20; i++) { 
-        $('#Yl_' + i + ' #Дом_' + housestatus[i-1]).show();
-    }
-}
+//    for (let i = 1; i < 20; i++) { 
+//        $('#Yl_' + i + ' #Дом_' + housestatus[i-1]).show();
+//    }
+//}
 
 
 
@@ -42,17 +42,17 @@ function housePlase() {
 /* БРОЙЛЕР */
 function BroilerMove() {
 
-    $('.broiler').css('top', '600px');
-    $('.broiler').css('right', '300px');
-
+    $('.broiler').css('top', '0px');
+    $('.broiler').css('right', '-200px');
+    $('.broiler').css('transition', '0s')
 
 
     setTimeout(function () {
-        $('.broiler').css('top', '-500px')
-        $('.broiler').css('right', '-800px')
-        $('.broiler').css('transition', '0s')
+        $('.broiler').css('top', '550px')
+        $('.broiler').css('right', '550px')
+        $('.broiler').css('transition', '3s')
 
-    }, 500)
+    }, 2000)
 }
 
 

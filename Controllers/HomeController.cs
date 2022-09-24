@@ -23,13 +23,13 @@ namespace _1983.Controllers
             _config = configuration;
         }
 
-        public IDbConnection dbConnection
-        {
-            get
-            {
-                return new SqlConnection(_config.GetConnectionString("MyHouse")); // соединение с базой
-            }
-        }
+        //public IDbConnection dbConnection
+        //{
+        //    get
+        //    {
+        //        return new SqlConnection(_config.GetConnectionString("MyHouse")); // соединение с базой
+        //    }
+        //}
 
 
         public IActionResult Index()
@@ -44,12 +44,11 @@ namespace _1983.Controllers
 
         public IActionResult Game()
         {
-
-            PageData pageData1 = new PageData(dbConnection); // передаем содитение на страницу
-            pageData1.ReadTable();
-
-
-            return View(pageData1);
+            PageData pageData1 = new PageData();
+            return View();
+            //PageData pageData1 = new PageData(dbConnection); // передаем содитение на страницу
+            //pageData1.ReadTable();
+            //return View(pageData1);
         }
 
         public IActionResult Menu()
