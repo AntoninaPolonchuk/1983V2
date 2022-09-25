@@ -23,6 +23,7 @@ namespace _1983.Controllers
             _config = configuration;
         }
 
+
         //public IDbConnection dbConnection
         //{
         //    get
@@ -45,7 +46,8 @@ namespace _1983.Controllers
         public IActionResult Game()
         {
             PageData pageData1 = new PageData();
-            return View();
+            return View(pageData1);
+
             //PageData pageData1 = new PageData(dbConnection); // передаем содитение на страницу
             //pageData1.ReadTable();
             //return View(pageData1);

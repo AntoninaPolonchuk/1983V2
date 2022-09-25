@@ -26,10 +26,19 @@ namespace _1983.Models
 
             HouseList = new List<House>();
 
-            for (int i = 1; i < 21; i++)
-            {
-                HouseList.Add(new House("Yl" + i));
-            }
+            
+            HouseList.Add(new House("Yl1"));
+            HouseList.Add(new House("Yl2"));
+            HouseList.Add(new House("Yl3"));
+            HouseList.Add(new House("Yl4"));
+            HouseList.Add(new House("Yl5"));
+            HouseList.Add(new House("Yl6"));
+            HouseList.Add(new House("Yl7"));
+            HouseList.Add(new House("Yl8"));
+            HouseList.Add(new House("Yl9"));
+            HouseList.Add(new House("Yl10"));
+            HouseList.Add(new House("Yl11"));
+
         }
     }
 }

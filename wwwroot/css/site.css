@@ -128,8 +128,6 @@ body {
     }
 }
 
-
-
     .mobile .broiler {
         position: absolute;
         top: 0px;
@@ -140,9 +138,196 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*ИГРА*/
 
-@media screen and (min-width: 768px) {
+.mobile .upInfo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh;
+    background: rgba(255, 255, 255, 0.40);
+    border-bottom: 5px solid #fff;
+}
+
+
+    .mobile .upInfo .gameMenu {
+        position: absolute;
+        height: 100%;
+        width: 15vw;
+        left:0;
+    }
+
+        .mobile .upInfo .gameMenu .gameMenuButtons {
+            position: relative;
+            text-align:center;
+        }
+
+            .mobile .upInfo .gameMenu .gameMenuButtons .menu {
+                position: absolute;
+                top: 0%;    
+            }
+
+            .mobile .upInfo .gameMenu .gameMenuButtons .pause {
+                position: relative;
+                text-align: center;
+                top: 70px;   /*КОСТЫЛЬ!!!!!!!!!!!*/
+            }
+
+
+
+
+            .mobile .upInfo .MessagePlace {
+                position: absolute;
+                height: 100%;
+                width: 85vw;
+                right: 0;
+            }
+
+                .mobile .upInfo .MessagePlace .gameMessages {
+                    position: absolute;
+                    bottom: 2px;
+                    width: 100%;
+                }
+
+                    .mobile .upInfo .MessagePlace .gameMessages .gameMessage {
+                        background: #fff;
+                        height: 4vh;
+                        margin:5px 10px;
+                        text-align: center;                        
+                    }
+
+                        .mobile .upInfo .MessagePlace .gameMessages .gameMessage .messageText {
+                            color: #1197C9;
+                            font-family: "Comic";
+                            font-size: 20px;
+                            font-weight: 600;
+                        }
+
+.mobile .money { /*Деньги*/
+}
+
+    .mobile .money .gameMessage {
+        position: absolute;
+        top: 15vh;
+        right: 0;
+        background: #fff;
+        height: 4vh;
+        width: 30vw;
+        text-align: center;
+        margin: 5px 10px;
+        border-radius: 50px 50px 50px 50px;
+    }
+
+        .mobile .money .gameMessage .count {
+            color: #1197C9;
+            font-family: "Comic";
+            font-size: 20px;
+        }
+
+
+
+
+
+.mobile .downInfo { /*Нижняя часть*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25vh;
+    background: rgba(255, 255, 255, 0.40);
+    border-top: 5px solid #fff;
+}
+
+    .mobile .downInfo .infoPlace {   
+        position: absolute;
+        left: 7vw;
+        width: 86vw;
+        bottom: 2vh;
+        height: 21vh;
+    }
+
+        .mobile .downInfo .infoPlace .houseInfo { /*Информация про застройку*/
+            background: #fff;
+            height: 13vh;
+            text-align: center;
+            margin: 5px 5px;
+            border: 5px solid #D2E5F6;
+            border-radius: 10px;
+            border-bottom: 10px solid #C3DAE8;
+        }
+
+            .mobile .downInfo .infoPlace .houseInfo .messageText {
+                color: #1197C9;
+                font-family: "Comic";
+                font-size: 18px;
+                margin: 3px;
+            }
+
+
+        .mobile .downInfo .infoPlace .houseInfoButtons { /*Кнонки построить-отмена*/
+            position: absolute;
+            height: 100%;
+            display: inline-block;
+        }
+             
+            .mobile .downInfo .infoPlace .houseInfoButtons .buttonpart1 {
+                position: absolute;
+                background: #fff;
+                height: 6vh;
+                width: 40vw;
+                text-align: center;
+                margin: 4px;
+                border: 3px solid #D2E5F6;
+                border-radius: 10px;
+                border-bottom: 6px solid #C3DAE8;
+            }
+
+            .mobile .downInfo .infoPlace .houseInfoButtons .buttonpart2 {
+                position: absolute;
+                background: #fff;
+                height: 6vh;
+                width: 40vw;
+                text-align: center;
+                left: 45vw;   /*НЕРЕАЛЬНО ЖУТКИЙ КОСТЫЛЬ....*/
+                margin: 4px;
+                border: 3px solid #D2E5F6;
+                border-radius: 10px;
+                border-bottom: 6px solid #C3DAE8;
+            }
+
+            .mobile .downInfo .infoPlace .houseInfoButtons .text {
+                color: #1197C9;
+                font-family: "Comic";
+                font-size: 30px;
+            }
+
+
+.mobile .gamePlathform {
+    position: absolute;
+    left: -300px;
+    top: 150px;
+}
+
+/*@media screen and (min-width: 768px) {
     .buttons {
         grid-template-columns: 25% 25% 25% 25%;
     }
@@ -160,15 +345,23 @@ body {
     .buttons2 {
         grid-template-columns: 0% 50% 50% 0%;
     }
-}
+}*/
 ﻿
+
+
+
+
 
 .move {
     position: relative;
     z-index: 100;
 }
 
-.money {
+
+
+
+
+/*.money {
     position: fixed;
     top: 15px;
     right: 0;
@@ -221,7 +414,7 @@ body {
     text-align: center;
     font-size: 20px;
     width: 100%;
-}
+}*/
 
 
 .house {
@@ -257,6 +450,20 @@ body {
     .house.Yl_17 {top: 250px; left: 700px;}
     .house.Yl_18 {top: 210px; left: 775px;}
     .house.Yl_19 {top: 175px; left: 850px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
