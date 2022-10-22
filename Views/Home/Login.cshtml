@@ -1,0 +1,56 @@
+﻿@model PageData
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<div class="">
+    <div class="">
+        <div class="LoginInfo">
+            <form method="post" asp-action="CheckLogin" asp-controller="Home">
+                <div>
+                    <input placeholder="Логин" name="name" autocomplete="off" />
+                </div>
+                <div>
+                    <input placeholder="Пароль" name="password" autocomplete="off" />
+                </div>
+                <div class="LoginButton">
+                    <button type="submit" class="logButton">Подтверить</button>
+                </div>
+            </form>
+
+
+
+
+
+            <form method="post" asp-action="RegisterLogin" asp-controller="Home">
+                <div>
+                    <input placeholder="Логин" name="name" autocomplete="off" />
+                </div>
+                <div>
+                    <input placeholder="Пароль" name="password" autocomplete="off" />
+                </div>
+                <div class="LoginButton">
+                    <button type="submit" class="logButton">Зарегистрироваться</button>
+                </div>
+            </form>
+
+@*            <form method="post" asp-controller="Home" asp-action="CheckLogin">
+                <input placeholder="Подсказка" name="nikname" autocomplete="off" />
+                <button type="submit">Тык</button>
+            </form>*@
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+@section Scripts{
+
+    <script src="~/js/login.js"></script>
+}

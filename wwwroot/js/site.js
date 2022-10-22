@@ -1,7 +1,6 @@
 ﻿
 // Меню для компа
 
-
 $(document).ready(function () {
     setInterval(function () { BroilerMove() }, 2000);
 });
