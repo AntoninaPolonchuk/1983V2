@@ -1,35 +1,31 @@
 ﻿
-let login="";
+$(document).ready(function () {
 
-$('.LoginButton').click(function () {
-    console.log($('#login').val());
-    login = $('#login').val();
-    //CheckLogin();
+    $('.CheckLoginView').hide();
+    $('.RegisterLoginView').hide();
 
+    let loadInfoStatus = Boolean(loadRegisterInfo.status);
+    let loadInfoText = loadRegisterInfo.text;
+
+    Loadstatus(loadInfoStatus);
+    $('.infoText').text(loadInfoText);
 });
 
 
-//function CheckLogin() {
 
-//    $.ajax({
-//        type: "POST",
-//        url: "Home/CheckLogin",       //контроллер
-//        async: true,
-//        cashe: false,
-//        timeout: 0,
-//        data: { log: login },
-//        dataType: "json", //
+function Loadstatus(loadInfo) {
+    if (loadInfo == true) {
+        
+        $('.RegisterLoginView').show();
+        
+    }
+    else if (loadInfo == false) {
+        
+        $('.CheckLoginView').show();
+        
+    }
+}
 
-//        success: function (responce) {
-//            console.log(responce);
-
-//        },
-//        error: function (XML, status, error) {
-//            console.log(status);
-
-//        }
-//    })
-//}
 
 
 

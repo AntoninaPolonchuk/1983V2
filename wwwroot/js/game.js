@@ -104,14 +104,14 @@ function allowClick() {
 
 // Сохранение состояния игры
 function GameSave() {
-
     $.ajax({
         type: "POST",
-        url: "GameSave",       //контроллер
+        url: "Home/GameSave",       //контроллер
         async: true,
         cashe: false,
         timeout: 15000,
         data: "datainfo=" + JSON.stringify(houseStateData),
+
         success: function (responce) {
             console.log(responce);
             setTimeout(function () {
@@ -150,7 +150,6 @@ function LevelDown() {
                 Houses[i].DaysForLevelDown = 300000;
             }
         }
-        //console.log(Houses[i].DaysForLevelDown + " " + Houses[i].Level + " " + Houses[i].Position); /// проверка. убрать
 
         if (Houses[i].DaysForLevelDown == 100000) {
             if (Houses[i].Level == 2 || Houses[i].Level == 3 || Houses[i].Level == 4) {
