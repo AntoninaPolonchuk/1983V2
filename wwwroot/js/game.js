@@ -106,7 +106,7 @@ function allowClick() {
 function GameSave() {
     $.ajax({
         type: "POST",
-        url: "Home/GameSave",       //контроллер
+        url: "Save/GameSave",       //контроллер
         async: true,
         cashe: false,
         timeout: 15000,

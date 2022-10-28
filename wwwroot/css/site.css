@@ -286,59 +286,6 @@ body {
 /*Авторизация мобильный*/
 
 
-/*.mobile .menu .fon .menuLogin {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    display: grid;
-    grid-template-rows: 25% 25% 25% 25%;
-}
-
-    .mobile .menu .fon .menuLogin .reg {
-        position: relative;
-        width: 98%;
-        background: #fff;
-        height: 6vh;
-        margin: 25px 15px;
-        text-align: center;
-        border: 5px solid #D2E5F6;
-        border-radius: 10px;
-        border-bottom: 10px solid #C3DAE8;
-    }
-
-    .mobile .menu .fon .menuLogin .logInfo {
-        position: relative;
-        bottom: 10px;
-        width: 100%;
-        height: 100%;
-        height: 6vh;
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
-
-        .mobile .menu .fon .menuLogin .logInfo .infoText {
-            position: relative;
-            text-align: center;
-            top: 25%;
-            font-size: 32px;
-        }
-
-        .mobile .menu .fon .menuLogin .logInfo .regButtonLink {
-            position: relative;
-            width: 80%;
-            left: 10%;
-            background: #fff;
-            height: 6vh;
-            margin: 25px 15px;
-            text-align: center;
-            border: 5px solid #D2E5F6;
-            border-radius: 10px;
-            border-bottom: 10px solid #C3DAE8;
-            color: #1AB0E7;
-            font-family: "Comic";
-            font-size: 30px;
-            font-weight: 600;
-        }*/
 
 .mobile .menu .fon .CheckLoginView {
     position: absolute;
@@ -351,17 +298,18 @@ body {
 
     .mobile .menu .fon .CheckLoginView .menuLogin {
         position: relative;
-        height: 100%;
+        
+        height: 80%;
         display: grid;
         grid-template-rows: 33% 33% 33%;
     }
 
         .mobile .menu .fon .CheckLoginView .menuLogin .log {
             position: relative;
-            top:40%;
+            top: 85%; /*костыль, блядь*/
             width: 98%;
             background: #fff;
-            height: 8vh;
+            height: 7vh;
             margin: 25px 15px;
             text-align: center;
             border: 5px solid #D2E5F6;
@@ -371,41 +319,41 @@ body {
 
 
 
-    .mobile .menu .fon .CheckLoginView .InfoAndButton {
-        position: absolute;
-        bottom: 10px;
-        width: 100%;
-        height: 100%;
-        height: 6vh;
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
+            .mobile .menu .fon .CheckLoginView .InfoAndButton {
+                position: absolute;
+                bottom: 10px;
+                width: 100%;
+                height: 100%;
+                height: 6vh;
+                display: grid;
+                grid-template-columns: 50% 50%;
+            }
 
 
 
-.mobile .menu .fon .menuLogin .logInfo .infoText {
-    position: relative;
-    text-align: center;
-    top: 25%;
-    font-size: 32px;
-}
+                .mobile .menu .fon .menuLogin .logInfo .infoText {
+                    position: relative;
+                    text-align: center;
+                    top: 25%;
+                    font-size: 32px;
+                }
 
-.mobile .menu .fon .menuLogin .logInfo .regButtonLink {
-    position: relative;
-    width: 80%;
-    left: 10%;
-    background: #fff;
-    height: 6vh;
-    margin: 25px 15px;
-    text-align: center;
-    border: 5px solid #D2E5F6;
-    border-radius: 10px;
-    border-bottom: 10px solid #C3DAE8;
-    color: #1AB0E7;
-    font-family: "Comic";
-    font-size: 30px;
-    font-weight: 600;
-}
+                    .mobile .menu .fon .menuLogin .logInfo .regButtonLink {
+                        position: relative;
+                        width: 80%;
+                        left: 10%;
+                        background: #fff;
+                        height: 6vh;
+                        margin: 25px 15px;
+                        text-align: center;
+                        border: 5px solid #D2E5F6;
+                        border-radius: 10px;
+                        border-bottom: 10px solid #C3DAE8;
+                        color: #1AB0E7;
+                        font-family: "Comic";
+                        font-size: 30px;
+                        font-weight: 600;
+                    }
 
 
 

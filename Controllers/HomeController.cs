@@ -23,10 +23,7 @@ namespace _1983.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IConfiguration _config;
-        //bool State;
-        //string Text;
-        
+        private readonly IConfiguration _config;      
         public HomeController(ILogger<HomeController> logger, IConfiguration configuration)
         {
             _logger = logger;
@@ -51,8 +48,6 @@ namespace _1983.Controllers
             writer.Write(registration.RegInfo);
             writer.Close();
 
-
-
             return View(registration);
 
         }
@@ -64,7 +59,6 @@ namespace _1983.Controllers
             {
                 PageData pageData1 = new PageData(dbConnection, new Guid(Request.Cookies["Hash"])); // передаем содинение и хеш на страницу
                 return View(pageData1);
-
             }
             else
             {
@@ -76,44 +70,6 @@ namespace _1983.Controllers
         {
             return View();
         }
-
-
-        //Сохранение
-        public IActionResult GameSave(IFormCollection dataSave)
-        {
-            GameLoadInfo gameData = JsonConvert.DeserializeObject<GameLoadInfo>(dataSave["datainfo"]); //десериализация
-            Guid guid = new Guid(Request.Cookies["Hash"]);
-
-            string list = JsonConvert.SerializeObject(gameData.HouseList); // КОСТЫЛЬ МОЕЙ МЕЧТЫ
-            GameLoadInfoDb json = new GameLoadInfoDb();
-
-            json.HouseList = list;
-            json.Hash = gameData.Hash;
-            json.TaxPercent = gameData.TaxPercent;
-            json.MoneyRest = gameData.MoneyRest;
-            json.RentPercent = gameData.RentPercent;
-            json.LevelUpCost = gameData.LevelUpCost;
-            json.Text1 = gameData.Text1;
-            json.Text2 = gameData.Text2;
-            json.Text3 = gameData.Text3;
-
-            using (IDbConnection database = dbConnection)
-            {
-                database.Execute("UPDATE House SET " +
-                    "MoneyRest=@MoneyRest, " +
-                    "RentPercent = @RentPercent, " +
-                    "TaxPercent = @TaxPercent, " +
-                    "LevelUpCost = @LevelUpCost, " +
-                    "Text1 = @Text1, " +
-                    "Text2 = @Text2, " +
-                    "Text3 = @Text3, " +
-                    "HouseList= @HouseList " +
-                    "where Hash = '" + guid + "'", json);
-            }
-
-            return Json(DateTime.Now.ToString("g") + " : " + dataSave["datainfo"]);
-        }
-
 
         public IActionResult CheckLogin(IFormCollection collect)
         {
@@ -133,8 +89,6 @@ namespace _1983.Controllers
                 }
                 else
                 {
-                    //Text = "неверно введен логин, или пароль";
-                    //State = true;
                     return RedirectToAction("Login", new {State = false, Text = "неверно введен логин, или пароль"});
                 }       
             }
@@ -142,10 +96,10 @@ namespace _1983.Controllers
 
 
         public IActionResult Register()
-        {
-            
+        {    
             return RedirectToAction("Login", new {State = true});
         }
+
 
         public IActionResult RegisterLogin(IFormCollection collect)
         {
@@ -156,34 +110,6 @@ namespace _1983.Controllers
         }
 
 
-
-
-
-        //Запрос в базу на соответствие логин - пароль
-        //Response.Cookies.Append("123", хеш)
-
-        //string path = "C:\\Users\\Taras Ponomarov\\Desktop\\qwe.txt";
-        //FileStream file = System.IO.File.Open((path), FileMode.OpenOrCreate, FileAccess.ReadWrite);
-        //StreamWriter writer = new StreamWriter(file);
-        //writer.Write(login);
-        // writer.Close();
-
-
-        //using (IDbConnection database = dbConnection)
-        //{
-        //    database.QuerySingle("SELECT Hash FROM House WHERE Name = '" + login + "'");
-        //}
-
-
-        //return RedirectToAction("Game");
-        //return Json(hash);
-
-
-
-
-
-
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
@@ -191,3 +117,25 @@ namespace _1983.Controllers
         }
     }
 }
+
+
+
+//Запрос в базу на соответствие логин - пароль
+//Response.Cookies.Append("123", хеш)
+
+//string path = "C:\\Users\\Taras Ponomarov\\Desktop\\qwe.txt";
+//FileStream file = System.IO.File.Open((path), FileMode.OpenOrCreate, FileAccess.ReadWrite);
+//StreamWriter writer = new StreamWriter(file);
+//writer.Write(login);
+// writer.Close();
+
+
+//using (IDbConnection database = dbConnection)
+//{
+//    database.QuerySingle("SELECT Hash FROM House WHERE Name = '" + login + "'");
+//}
+
+
+//return RedirectToAction("Game");
+//return Json(hash);
+
