@@ -5,7 +5,6 @@ using System.IO;
 
 namespace _1983.Models
 {
-
     public class GameLoadInfo
     {
         public Guid Hash { get; set; }
@@ -17,6 +16,7 @@ namespace _1983.Models
         public string Text2 { get; set; }
         public string Text3 { get; set; }
         public List<House> HouseList { get; set; }
+        public List<Random> RandomList { get; set; }
 
 
 

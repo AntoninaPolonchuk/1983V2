@@ -8,12 +8,14 @@ let Houses = houseStateData.HouseList;
 let ImproveCost;
 let Taxes = 0;
 let Rent = 0;
+let info = false;
+let RandomValue = houseStateData.RandomList;
 
 $(document).ready(function () {
 
     HouseForeach(Houses);
     GameLoad();
-    GameSave();
+    //GameSave();
     LevelDown();
     
     setTimeout(function () {
@@ -24,12 +26,8 @@ $(document).ready(function () {
         GetRent();
     }, 50000)
 
-    //$('body').css({ 'overflow': 'hidden' });
-    //$('body').css({ 'transition': '1s' });
-    //$('body').css({ 'animation': 'day 20s ease-in-out infinite' });
+    RandomChangeValue();
 });
-
-/*console.log($(this).parent().attr("class"))*/
 
 function HouseForeach(Houses) {
 
@@ -84,7 +82,7 @@ $('.buttonpartImprove').click(function () {
     HouseForeach(Houses);
     $('.downInfo').css({ 'bottom': buttonplace1 });
     allowClick();
-    GameSave(); // Жрать не просит, но делает жизнь лучше. 
+    GameSave(); 
 });
 
 //Убираем возможность повторного клика на домик
@@ -101,34 +99,6 @@ function allowClick() {
         $('#Дом_' + i).css({ 'pointer-events': 'auto' })
     }
 }
-
-// Сохранение состояния игры
-function GameSave() {
-    $.ajax({
-        type: "POST",
-        url: "Save/GameSave",       //контроллер
-        async: true,
-        cashe: false,
-        timeout: 15000,
-        data: "datainfo=" + JSON.stringify(houseStateData),
-
-        success: function (responce) {
-            console.log(responce);
-            setTimeout(function () {
-                GameSave();
-            }, 5000);
-        },
-        error: function (XML, status, error) {
-            console.log(status);
-            setTimeout(function () {
-                GameSave();
-            }, 10000);
-        }
-    })
-}
-
-
-let info = false;
 
 //Понижение уровня домика
 function LevelDown() {
@@ -181,6 +151,7 @@ function PayTaxes() { //ДОБАВИТЬ В SQL ФИКСАЦИЮ ВРЕМЕНИ.
         else if (Houses[i].Level == 4) {Taxes += 70000;}
         else if (Houses[i].Level == 5) {Taxes += 80000;}
     }
+    Taxes = Taxes / 100 * houseStateData.TaxPercent;  
     houseStateData.MoneyRest -= Taxes;
     ChangeText("Заплатил " + Taxes + " налогов и спи спокойно");
     Taxes = 0;
@@ -201,6 +172,7 @@ function GetRent() {
         else if (Houses[i].Level == 4) {Rent += 80000;}
         else if (Houses[i].Level == 5) {Rent += 100000;}
     }
+    Rent = Rent / 100 * houseStateData.RentPercent;  
     houseStateData.MoneyRest += Rent;
     ChangeText("Получил " + Rent + " аренды, чтобы заплатить налоги и спать спокойно");
     $('.count').text(houseStateData.MoneyRest); 
@@ -247,8 +219,41 @@ function GameLoad() {
 
 
 
+//Рандом 
+function RandomChangeValue() {
+
+    setTimeout(function () {
+
+        let number = Math.floor(Math.random() * RandomValue.length);
+
+
+        if (RandomValue[number].Type == 1) {
+            houseStateData.LevelUpCost = RandomValue[number].PercentChange;
+        }
+        else if (RandomValue[number].Type == 2) {
+            houseStateData.TaxPercent = RandomValue[number].PercentChange;
+        }
+        else if (RandomValue[number].Type == 3) {
+            houseStateData.RentPercent = RandomValue[number].PercentChange;
+        }
+
+        $('.buildMessage').css({ 'right': '0' });
+        $('.inform').text(RandomValue[number].Text);
+
+
+        setTimeout(function () {
+            $('.buildMessage').css({ 'right': '-55vw' });
+        }, 10000)
+    }, 10000)
+
+    setTimeout(function () {
+        RandomChangeValue();
+    }, 50000);
+
+}
 
 
 
-
-
+$('.buildMessage').click(function () {
+    $('.buildMessage').css({ 'right': '-55vw' });
+})

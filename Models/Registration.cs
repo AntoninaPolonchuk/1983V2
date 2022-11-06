@@ -4,7 +4,7 @@ using System.Data.Common;
 
 namespace _1983.Models
 {
-    public class Registration //КОСТЫЛЬ. Подумать, как лучше
+    public class Registration
     {
         public bool Status { get; set; }
         public string Text { get; set; }

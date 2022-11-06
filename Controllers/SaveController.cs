@@ -22,13 +22,13 @@ namespace _1983.Controllers
 
         public IDbConnection dbConnection
         {
-            get { return new SqlConnection(_config.GetConnectionString("MyHouse")); } // соединение с базой 
+            get { return new SqlConnection(_config.GetConnectionString("MyHouse")); } 
         }
 
         //Сохранение
         public IActionResult GameSave(IFormCollection dataSave)
         {
-            GameLoadInfo gameData = JsonConvert.DeserializeObject<GameLoadInfo>(dataSave["datainfo"]); //десериализация
+            GameLoadInfo gameData = JsonConvert.DeserializeObject<GameLoadInfo>(dataSave["datainfo"]); 
             Guid guid = new Guid(Request.Cookies["Hash"]);
 
             string list = JsonConvert.SerializeObject(gameData.HouseList); // КОСТЫЛЬ МОЕЙ МЕЧТЫ
@@ -60,9 +60,5 @@ namespace _1983.Controllers
 
             return Json(DateTime.Now.ToString("g") + " : " + dataSave["datainfo"]);
         }
-
-
-
-
     }
 }

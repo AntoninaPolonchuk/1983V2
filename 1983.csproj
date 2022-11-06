@@ -8,6 +8,7 @@
   <ItemGroup>
     <Content Remove="Views\Home\Index - Copy.cshtml" />
     <Content Remove="Views\Home\Privacy.cshtml" />
+    <Content Remove="wwwroot\css\game.css" />
   </ItemGroup>
 
   <ItemGroup>

@@ -34,11 +34,6 @@ namespace _1983.Models
                         "VALUES (@Hash, @MoneyRest, @RentPercent, @TaxPercent, @LevelUpCost, @Text1, @Text2, @Text3)", GameDataUser);
                 database.Execute("UPDATE House SET HouseList = '" + list + "' where Hash = '" + Hash + "'");
             }
-
         }
-
     }
-
-    
-
 }

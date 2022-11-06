@@ -3,29 +3,6 @@
     padding: 0;
 }
 
-/*ТЕСТОВЫЙ КУСОК*/
-.jsonInfo {
-    position: absolute;
-    top: 300px;
-}
-
-
-
-
-
-/*@media (max-width: 767px) {*/ /*работает маскимально странно*/
-/*body {
-        width: 100vw;
-        position: fixed;
-    }
-}*/
-/*@viewport {
-    user-zoom: fixed;
-}
-*/
-
-
-/*Перенести непосредственно на страницу*/
 body {
     overflow: hidden;
     background: #bfe8f4;
@@ -37,167 +14,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Мобильное меню*/
-
-
-
-    .pc {
-
-    }
-
-        .pc .right { /*правая половина */
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.40);
-            border-left: 5px solid #fff;
-        }
-
-            .pc .right .name {
-                position: absolute;
-                width: 100%;
-                text-align: center;
-                top: 3vh;
-            }
-
-
-            .pc .right .menu {
-                position: absolute;
-                bottom: 0; 
-                left: 10%;
-                width: 40vw;
-                height: 60vh;
-                /*background: rgba(0, 255, 255, 0.40);*/
-            }
-
-
-                .pc .right .menu .fon {
-                    position: relative;
-                    background: rgba(117, 196, 237, 0.55);
-                    height: 50vh;
-                    border: 5px solid #fff;
-                    border-radius: 70px 70px 50px 50px;
-                    margin: 50px;
-                }
-
-
-                    .pc .right .menu .fon .strangeButton {   /*КОСТЫЛЬ*/
-                        position: absolute;
-                        top: -11vh;
-                        left: 35%;
-                    }
-
-                    .pc .right .menu .fon .menuButtons {
-                        position: absolute;
-                        bottom: 10px;
-                        width: 100%;
-
-                    }
-
-                        .pc .menu .fon .menuButtons .menuButton {
-                            background: #fff;
-                            height: 8vh;
-                            margin: 25px 15px;
-                            text-align: center;
-                            border: 5px solid #D2E5F6;
-                            border-radius: 10px;
-                            border-bottom: 10px solid #C3DAE8;
-                        }
-
-                            .pc .menu .fon .menuButtons .menuButton .buttonText {
-                                color: #1AB0E7;
-                                font-family: "Comic";
-                                font-size: 38px;
-                                font-weight: 600;
-                            }
-
-
-
-
-
-
-
-
-
-
-
-.mobile {
-
-}
-
-    .mobile .menu {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 58vh;
-    }
-
-        .mobile .menu .fon {
-            position: relative;
-            background: rgba(117, 196, 237, 0.55);
-            height: 50vh;
-            border: 5px solid #fff;
-            border-radius: 70px 70px 50px 50px;
-            margin: 35px;
-        }
-
-            .mobile .menu .fon .strangeButton {
-                position: absolute;
-                left: 80px;
-                top: -95px;
-            }
-
-            .mobile .menu .fon .menuButtons {
-                position: absolute;
-                bottom: 10px;
-                width: 100%;
-            }
-
-                .mobile .menu .fon .menuButtons .menuButton {
-                    background: #fff;
-                    height: 8vh;
-                    margin: 25px 15px;
-                    text-align: center;
-                    border: 5px solid #D2E5F6;
-                    border-radius: 10px;
-                    border-bottom: 10px solid #C3DAE8;
-                }
-
-                    .mobile .menu .fon .menuButtons .menuButton .buttonText {
-                        color: #1AB0E7;
-                        font-family: "Comic";
-                        font-size: 38px;
-                        font-weight: 600;
-                    }
-
-
     .mobile .name {
         position: absolute;
         top: 40px;
@@ -207,33 +23,9 @@ body {
 
     .mobile .back .plathform .city {
         position: absolute;
-        left: -150px;
-        bottom: -50px;
         animation: myCity 20s ease-in-out infinite;
     }
 
-@keyframes myCity {
-    0% {
-        left: -150px;
-        bottom: 0px;
-    }
-    25% {
-        left: 0px;
-        bottom: -50px;
-    }
-    50% {
-        left: -150px;
-        bottom: 0px;
-    }
-    75% {
-        left: 0px;
-        bottom: 50px;
-    }
-    100% {
-        left: -150px;
-        bottom: 0px;
-    }
-}
 
 @keyframes myName {
     0% {left: 5px;}
@@ -251,41 +43,216 @@ body {
     }
 
 
-
    /*Регистрация мобильный*/
+   /*768px*/
+@media screen and (min-width: 1000px) { /*рс*/
+    .mobile .menu {
+        bottom: 20vh;
+        left: 25vw;
+        width: 50vw;
+        height: 40vh;
+    }
 
-.mobile .menu .fon .menuRegister {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    display: grid;
-    grid-template-rows: 33% 33% 33%;
-}
+        .mobile .menu .fon .strangeButton {
+            position: absolute;
+            left: calc(25vw - 35px - 11vh);
+            top: -11vh;
+        }
 
-    .mobile .menu .fon .menuRegister .reg {
-        position: relative;
-        width:98%;
-        background: #fff;
-        height: 8vh;
-        margin: 25px 15px;
-        text-align: center;
-        border: 5px solid #D2E5F6;
-        border-radius: 10px;
-        border-bottom: 10px solid #C3DAE8;
+    @keyframes myCity {
+        0% {
+            left: 25vw;
+            bottom: 0px;
+        }
+
+        25% {
+            left: 35vw;
+            bottom: -50px;
+        }
+
+        50% {
+            left: 25vw;
+            bottom: 0px;
+        }
+
+        75% {
+            left: 35vw;
+            bottom: 50px;
+        }
+
+        100% {
+            left: 25vw;
+            bottom: 0px;
+        }
+    }
+    /*Игра рс */
+
+    .mobile .gamePlathform {
+        left: 15vw;
+    }
+
+    .mobile .upInfo .MessagePlace .gameMessages .gameMessage .messageText {
+        font-size: 20px;
+    }
+
+    .mobile .money .gameMessage {
+        width: 50vw;
+        top: 15vh;
+    }
+
+        .mobile .money .gameMessage .count {
+            font-size: 20px;
+        }
+
+    .mobile .buildMessage {
+        top: 20vh;
+        right: -40vw; /*меняется*/
+        height: 10vh;
+        width: 35vw;
+    }
+
+        .mobile .buildMessage .inform {
+            font-size: 20px;
+        }
+
+    .mobile .upInfo {
+        height: 15vh;
 
     }
 
-        .mobile .RegistrationButton {
-            color: #1AB0E7;
-            font-family: "Comic";
-            font-size: 30px;
-            font-weight: 600;
+        .mobile .upInfo .MessagePlace .gameMessages .gameMessage {
+            height: 4vh;
         }
 
 
+}
+
+@media screen and (max-width: 1000px) { 
+    .mobile .menu {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 58vh;
+    }
+
+        .mobile .menu .fon .strangeButton {
+            position: absolute;
+            left: calc(50vw - 35px - 11vh);
+            top: -11vh;
+        }
+
+
+    @keyframes myCity {
+        0% {
+            left: -5vw;
+            bottom: 0px;
+        }
+
+        25% {
+            left: 5vw;
+            bottom: -50px;
+        }
+
+        50% {
+            left: -5vw;
+            bottom: 0px;
+        }
+
+        75% {
+            left: 5vw;
+            bottom: 50px;
+        }
+
+        100% {
+            left: -5vw;
+            bottom: 0px;
+        }
+    }
+
+    /*Игра mob*/
+    .mobile .gamePlathform {
+        left: -60vw;
+    }
+    
+    .mobile .upInfo .MessagePlace .gameMessages .gameMessage .messageText {
+        font-size: 16px;
+    }
+
+    .mobile .money .gameMessage {
+        width: 50vw;
+        top: 18vh;
+    }
+
+        .mobile .money .gameMessage .count {
+            font-size: 16px;
+        }
+
+    .mobile .buildMessage {
+        top: 23vh;
+        right: -55vw; /*меняется*/
+        height: 14vh;
+        width: 50vw;
+    }
+
+        .mobile .buildMessage .inform {
+            font-size: 16px;
+        }
+
+    .mobile .upInfo {
+        height: 18vh;
+    }
+        .mobile .upInfo .MessagePlace .gameMessages .gameMessage {
+            height: 5vh;
+        }
+
+}
+
+
+/*Регистрация мобильный*/
+
+.mobile .menu {
+    position: absolute;
+
+}
+
+    .mobile .menu .fon {
+        position: relative;
+        background: rgba(117, 196, 237, 0.55);
+        height: 50vh;
+        border: 5px solid #fff;
+        border-radius: 70px 70px 50px 50px;
+        margin: 35px;
+    }
+
+        .mobile .menu .fon .menuRegister {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            display: grid;
+            grid-template-rows: 33% 33% 33%;
+        }
+
+            .mobile .menu .fon .menuRegister .reg {
+                position: relative;
+                width: 95%;  /*выглядит как костыль*/
+                background: #fff;
+                height: 8vh;
+                margin: 25px 15px;
+                text-align: center;
+                border: 5px solid #D2E5F6;
+                border-radius: 10px;
+                border-bottom: 10px solid #C3DAE8;
+            }
+
+                .mobile .RegistrationButton {
+                    color: #1AB0E7;
+                    font-family: "Comic";
+                    font-size: 30px;
+                    font-weight: 600;
+                }
+
+
 /*Авторизация мобильный*/
-
-
 
 .mobile .menu .fon .CheckLoginView {
     position: absolute;
@@ -298,7 +265,7 @@ body {
 
     .mobile .menu .fon .CheckLoginView .menuLogin {
         position: relative;
-        
+        width: 100%;
         height: 80%;
         display: grid;
         grid-template-rows: 33% 33% 33%;
@@ -307,7 +274,7 @@ body {
         .mobile .menu .fon .CheckLoginView .menuLogin .log {
             position: relative;
             top: 85%; /*костыль, блядь*/
-            width: 98%;
+            width: 95%;
             background: #fff;
             height: 7vh;
             margin: 25px 15px;
@@ -318,62 +285,38 @@ body {
         }
 
 
+    .mobile .menu .fon .CheckLoginView .InfoAndButton {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        height: 100%;
+        height: 6vh;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
 
-            .mobile .menu .fon .CheckLoginView .InfoAndButton {
-                position: absolute;
-                bottom: 10px;
-                width: 100%;
-                height: 100%;
-                height: 6vh;
-                display: grid;
-                grid-template-columns: 50% 50%;
-            }
+        .mobile .menu .fon .CheckLoginView .InfoAndButton .infoText {
+            position: relative;
+            text-align: center;
+            font-family: "Comic";
+            font-size: 18px;
 
+        }
 
-
-                .mobile .menu .fon .menuLogin .logInfo .infoText {
-                    position: relative;
-                    text-align: center;
-                    top: 25%;
-                    font-size: 32px;
-                }
-
-                    .mobile .menu .fon .menuLogin .logInfo .regButtonLink {
-                        position: relative;
-                        width: 80%;
-                        left: 10%;
-                        background: #fff;
-                        height: 6vh;
-                        margin: 25px 15px;
-                        text-align: center;
-                        border: 5px solid #D2E5F6;
-                        border-radius: 10px;
-                        border-bottom: 10px solid #C3DAE8;
-                        color: #1AB0E7;
-                        font-family: "Comic";
-                        font-size: 30px;
-                        font-weight: 600;
-                    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        .mobile .menu .fon .CheckLoginView .InfoAndButton .regButtonLink {
+            position: relative;
+            width: 90%;
+            background: #fff;
+            height: 6vh;
+            text-align: center;
+            border: 5px solid #D2E5F6;
+            border-radius: 10px;
+            border-bottom: 10px solid #C3DAE8;
+            color: #1AB0E7;
+            font-family: "Comic";
+            font-size: 18px;
+            font-weight: 600;
+        }
 
 
 /*ИГРА*/
@@ -383,14 +326,12 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 15vh;
     background: rgba(255, 255, 255, 0.40);
     border-bottom: 5px solid #fff;
     user-select: none;
 }
 
-
-    .mobile .upInfo .gameMenu {
+/*    .mobile .upInfo .gameMenu {
         position: absolute;
         height: 100%;
         width: 15vw;
@@ -412,38 +353,35 @@ body {
     
             .mobile .upInfo .gameMenu .gameMenuButtons .pauseRound {
                 position: relative;
-            }
-
-
+            }*/
 
 
     .mobile .upInfo .MessagePlace {
         position: absolute;
         height: 100%;
-        width: 85vw;
+        width: 100vw;
         right: 0;
         top: 0;
     }
 
-                .mobile .upInfo .MessagePlace .gameMessages {
-                    position: absolute;
-                    bottom: 2px;
-                    width: 100%;
+        .mobile .upInfo .MessagePlace .gameMessages {
+            position: absolute;
+            bottom: 2px;
+            width: 100%;
+        }
+
+            .mobile .upInfo .MessagePlace .gameMessages .gameMessage {
+                background: #fff;
+                margin: 5px 10px;
+                text-align: center;
+            }
+
+                .mobile .upInfo .MessagePlace .gameMessages .gameMessage .messageText {
+                    color: #1197C9;
+                    font-family: "Comic";
+                    font-weight: 600;
                 }
 
-                    .mobile .upInfo .MessagePlace .gameMessages .gameMessage {
-                        background: #fff;
-                        height: 4vh;
-                        margin:5px 10px;
-                        text-align: center;                        
-                    }
-
-                        .mobile .upInfo .MessagePlace .gameMessages .gameMessage .messageText {
-                            color: #1197C9;
-                            font-family: "Comic";
-                            font-size: 20px;
-                            font-weight: 600;
-                        }
 
 .mobile .money { /*Деньги*/
     user-select: none;
@@ -451,11 +389,9 @@ body {
 
     .mobile .money .gameMessage {
         position: absolute;
-        top: 15vh;
         right: 0;
         background: #fff;
         height: 4vh;
-        width: 30vw;
         text-align: center;
         margin: 5px 10px;
         border-radius: 50px 50px 50px 50px;
@@ -464,10 +400,24 @@ body {
         .mobile .money .gameMessage .count {
             color: #1197C9;
             font-family: "Comic";
-            font-size: 20px;
         }
 
+.mobile .buildMessage {
+    position: absolute;
+    background: #fff;
+    margin: 5px 10px;
+    border-radius: 25px 25px 25px 25px;
+    transition: 1s;
+}
 
+    .mobile .buildMessage .inform {
+        position: relative;
+        padding: 5px;
+        left: 10px;
+        right: 10px;
+        color: #1197C9;
+        font-family: "Comic";
+    }
 
 
 
@@ -536,41 +486,17 @@ body {
 
 .mobile .gamePlathform {
     position: absolute;
-    left: -300px;
-    top: 150px;
+/*    left: -300px;
+    top: 150px;*/
+top: 20vh;
+
 }
-
-/*@media screen and (min-width: 768px) {
-    .buttons {
-        grid-template-columns: 25% 25% 25% 25%;
-    }
-
-    .buttons2 {
-        grid-template-columns: 25% 25% 25% 25%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .buttons {
-        grid-template-columns: 0% 50% 50% 0%;
-    }
-
-    .buttons2 {
-        grid-template-columns: 0% 50% 50% 0%;
-    }
-}*/
-﻿
-
-
-
 
 
 .move {
     position: relative;
-    z-index: 100;
+    /*z-index: 100;*/
 }
-
-
 
 
 .house {
@@ -584,7 +510,6 @@ body {
         transform: scale(103%);
         transition: 0.1s;
     }
-
 
 
     .house.Yl_1 {top: 200px;left: 340px;}
@@ -606,7 +531,6 @@ body {
     .house.Yl_17 {top: 250px; left: 700px;}
     .house.Yl_18 {top: 210px; left: 775px;}
     .house.Yl_19 {top: 175px; left: 850px;}
-
 
 
 #Дом_0 {
@@ -733,7 +657,6 @@ body {
     100% {fill: #9cbd2a;}
 }
 
-/*Перенести на страницу с игрой*/
 
 @keyframes day {
     0% {background: #bfe8f4;}
@@ -939,3 +862,36 @@ body {
     90% {fill: #0192d5;}
     100% {fill: #0192d5;}
 }
+
+
+
+
+
+/*Останки меню*/
+
+
+.mobile {
+}
+
+            .mobile .menu .fon .menuButtons {
+                position: absolute;
+                bottom: 10px;
+                width: 100%;
+            }
+
+                .mobile .menu .fon .menuButtons .menuButton {
+                    background: #fff;
+                    height: 8vh;
+                    margin: 25px 15px;
+                    text-align: center;
+                    border: 5px solid #D2E5F6;
+                    border-radius: 10px;
+                    border-bottom: 10px solid #C3DAE8;
+                }
+
+                    .mobile .menu .fon .menuButtons .menuButton .buttonText {
+                        color: #1AB0E7;
+                        font-family: "Comic";
+                        font-size: 38px;
+                        font-weight: 600;
+                    }

@@ -50,7 +50,7 @@ namespace _1983
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Menu}/{id?}");
+                    pattern: "{controller=Home}/{action=Game}/{id?}");
             });
         }
     }

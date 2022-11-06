@@ -25,6 +25,7 @@ namespace _1983.Models
         private IDbConnection Connect;
 
         public List<House> houses = new List<House>();
+        public List<Random> RandomInfo{ get; set; }
 
 
         public PageData(IDbConnection dbConnection, Guid hash)
@@ -35,16 +36,16 @@ namespace _1983.Models
             GameDataUserJson = JsonConvert.SerializeObject(GameDataFromDb);
         }
 
-
         public void ReadTable(Guid hash)
         {
 
             using (IDbConnection database = Connect)
             {
                 GameDataFromDbTest = database.Query<GameLoadInfoDb>("SELECT * FROM House where Hash = " + "'" + hash + "'").ToList();
+                RandomInfo = database.Query<Random>("SELECT * FROM Random").ToList();
 
-                var q = GameDataFromDbTest[0].HouseList;
-                var res = JsonConvert.DeserializeObject<House[]>(q);
+                var tempHouseInfo = GameDataFromDbTest[0].HouseList;
+                var res = JsonConvert.DeserializeObject<House[]>(tempHouseInfo);
                 for (int i = 0; i < res.Length; i++)
                 {
                     houses.Add(res[i]);
@@ -59,18 +60,9 @@ namespace _1983.Models
                 GameDataFromDb.Text2 = GameDataFromDbTest[0].Text2;
                 GameDataFromDb.Text3 = GameDataFromDbTest[0].Text3;
                 GameDataFromDb.HouseList = houses;
-
-
-                //string path = "C:\\Users\\Taras Ponomarov\\Desktop\\qwe.txt";
-                //FileStream file = File.Open((path), FileMode.OpenOrCreate, FileAccess.ReadWrite);
-                //StreamWriter writer = new StreamWriter(file);
-
-                //writer.Write(q);
-                //writer.Close();
+                GameDataFromDb.RandomList = RandomInfo;
 
             }
         }
-
-
     }
 }

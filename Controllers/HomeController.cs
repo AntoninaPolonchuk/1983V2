@@ -34,19 +34,13 @@ namespace _1983.Controllers
         {
             get
             {
-                return new SqlConnection(_config.GetConnectionString("MyHouse")); // соединение с базой
+                return new SqlConnection(_config.GetConnectionString("MyHouse")); 
             }
         }
 
         public IActionResult Login(bool State, string Text)
         {
             RegisrtationInfo registration = new RegisrtationInfo(State, Text);
-
-            string path = "C:\\Users\\Taras Ponomarov\\Desktop\\qwe.txt";
-            FileStream file = System.IO.File.Open((path), FileMode.OpenOrCreate, FileAccess.ReadWrite);
-            StreamWriter writer = new StreamWriter(file);
-            writer.Write(registration.RegInfo);
-            writer.Close();
 
             return View(registration);
 
@@ -117,25 +111,3 @@ namespace _1983.Controllers
         }
     }
 }
-
-
-
-//Запрос в базу на соответствие логин - пароль
-//Response.Cookies.Append("123", хеш)
-
-//string path = "C:\\Users\\Taras Ponomarov\\Desktop\\qwe.txt";
-//FileStream file = System.IO.File.Open((path), FileMode.OpenOrCreate, FileAccess.ReadWrite);
-//StreamWriter writer = new StreamWriter(file);
-//writer.Write(login);
-// writer.Close();
-
-
-//using (IDbConnection database = dbConnection)
-//{
-//    database.QuerySingle("SELECT Hash FROM House WHERE Name = '" + login + "'");
-//}
-
-
-//return RedirectToAction("Game");
-//return Json(hash);
-

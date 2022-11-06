@@ -16,7 +16,6 @@ namespace _1983.Models
         public string Text2 { get; set; }
         public string Text3 { get; set; }
         public string HouseList { get; set; }
-
+        public List<Random> RandomList { get; set; }
     }
-
 }
